@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>BẢNG GIÁ MAP IOS - PVM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-MCw98/S0fGaG3Oxy1Slqv1y4E5ZZjS30STCepPjj/FJEEcVNt8Jc8a5lvRTRjWzS" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vo day de tham khao gia map ne hihi">
+    <meta property="og:image" content="https://i.ibb.co/GfDfDYy/Web-capture-10-11-2023-164256.jpg">
+    <title>BẢNG GIÁ MAP AOV IOS - S23</title>
+    <link rel="icon" href="https://i.ibb.co/prqJGzv/f45f6574-0f94-4d9e-8b8b-ec83070b7a2d.png">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+      body {
+        background-color: #20222b;
+        color: #d8d4cf;
+        font-family: "Play", sans-serif;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .packages {
+        margin: 20px;
+        width: 300px;
+        padding-bottom: 1.5em;
+        height: 100%;
+        background-color: #20222b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        border-radius: 20px;
+        box-shadow: rgb(53, 57, 71) 0px 19px 38px, rgba(53, 57, 71, 0.2) 0px 15px 12px;
+        flex-wrap: wrap;
+        color: #d8d4cf;
+      }
+
+      h1 {
+        font-size: 1.85em;
+      }
+
+      h2 {
+        font-size: 1.75em;
+      }
+
+      sub {
+        font-size: 0.6em;
+      }
+
+      .list li {
+        font-size: 16px;
+        list-style: none;
+        border-bottom: 1px solid #f4f4f4;
+        padding-inline-start: 0;
+        border-width: 1px;
+        padding: 10px;
+      }
+
+      .first {
+        margin-top: 40px;
+        border-top: 1px solid #f4f4f4;
+      }
+
+      .list {
+        width: 80%;
+      }
+
+      ol,
+      ul {
+        padding: 0;
+      }
+
+      .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input,
+      label {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px 0;
+      }
+
+      .button {
+        padding: 10px 30px;
+        text-decoration: none;
+        font-size: 1.4em;
+        margin: 15px 15px;
+        border-radius: 50px;
+        color: #fff;
+        transition: all 0.3s ease 0s;
+      }
+
+      .button:hover {
+        transform: scale(1.2);
+      }
+
+      .button1 {
+        background-color: #00cc99;
+      }
+
+      .button2 {
+        background-color: #ff007c;
+      }
+
+      .button3 {
+        background-color: #ffae42;
+      }
+
+      .button4 {
+        background-color: #FA1E26;
+        box-shadow: 0 0 10px 0 #FA1E26 inset, 0 0 20px 2px #FA1E26;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 72px;
+        height: 40px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #d8d4cf;
+        -webkit-transition: 0.6s;
+        box-shadow: rgb(53, 57, 71) 2px 6px 25px;
+        transform: translate(0px, 0px);
+        transition: 0.6s ease transform, 0.6s box-shadow;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 32px;
+        width: 32px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #20222b;
+        -webkit-transition: 0.6s;
+        transition: 0.6s;
+      }
+
+      input:checked+.slider {
+        background-color: #d8d4cf;
+      }
+
+      input:focus+.slider {
+        box-shadow: 0 0 1px #50bfe6;
+      }
+
+      input:checked+.slider:before {
+        -webkit-transform: translateX(32px);
+        -ms-transform: translateX(32px);
+        transform: translateX(32px);
+      }
+
+      .slider.round {
+        border-radius: 40px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      .package-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Hiển thị tùy theo lựa chọn giữa iPhone và iPad */
+      .text1 {
+        display: block;
+      }
+
+      .text2 {
+        display: none;
+      }
+
+      .list-iphone {
+        display: block;
+      }
+
+      .list-ipad {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <center>
+          <h1>BẢNG GIÁ MAP AOV iOS - S23</h1>
+        </center>
+        <div class="toggle-btn">
+          <span style="font-size: 1.4em; margin: 0.4em;">
+            <strong>Pham Van Manh Meo Meo 🤍</strong>
+          </span>
+        </div>
+      </div>
+      <div class="package-container"> 
+							
+							<div class="packages">
+								
+								<h2>-  Map Kín  -</h2>
+								
+								<h2 class="text1">70.000₫
+									
+									<sub>/1 tuần</sub>
+								
+								</h2>
+
+                <h2 class="text1">200.000₫
+									
+									<sub>/1 tháng</sub>
+								
+								</h2>
+								
+								<ul class="list list-iphone">
+                 
+									<li>☆ Hack Map</li>
+									
+									<li>☆ Cam Xa</li>
+									
+									<li>☆ Ổn Định</li>
+									
+									<li>☆ Sử Dụng Song Song</li>
+									
+									<li>☆ Không chống tố cáo vui lòng chơi 1 cách có kĩ năng. </li>
+								
+								</ul>
+								
+								<ul class="list list-ipad">
+									
+								</ul>
+								
+								<a href="https://m.me/100081839221735" class="button button1">Mua ngay</a>
+							
+							</div>
+							
+							<div class="packages">
+								
+								<h2>- Map Chống Tố -</h2>
+								
+								<h2 class="text1">90.000₫
+									
+									<sub>/1 tuần</sub>
+								
+								</h2>
+
+                <h2 class="text1">250.000₫
+									
+									<sub>/1 tháng</sub>
+								
+								</h2>
+								
+								<ul class="list list-iphone">
+									
+									<li>☆ Hack Map</li>
+									
+									<li>☆ Cam Xa</li>
+									
+									<li>☆ Sử Dụng Song Song</li>
+									
+									<li>☆ CHỐNG TỐ CÁO</li>
+									
+									<li>☆ Nhắn tin với ADMIN để được hướng dẫn sử dụng</li>								
+								
+								</ul>
+								
+								<ul class="list list-ipad">								
+								
+								</ul>
+								
+								<a href="https://m.me/100081839221735" class="button button2">Mua ngay</a>
+							
+							</div>
+							</div> </div>
+
+            <center>  
+              <p class="footer__copy">&#169; Norameoo. All rights reserved.</p>
+            </div>
+            </center>
+    
+    </div>
+    <script>
+      function check() {
+        var checkBox = document.getElementById("checkbox");
+        var text1 = document.getElementsByClassName("text1");
+        var text2 = document.getElementsByClassName("text2");
+        var listiPhone = document.getElementsByClassName("list-iphone");
+        var listiPad = document.getElementsByClassName("list-ipad");
+        for (var i = 0; i < text1.length; i++) {
+          if (checkBox.checked) {
+            text1[i].style.display = "none";
+            text2[i].style.display = "block";
+            listiPhone[i].style.display = "none";
+            listiPad[i].style.display = "block";
+          } else {
+            text1[i].style.display = "block";
+            text2[i].style.display = "none";
+            listiPhone[i].style.display = "block";
+            listiPad[i].style.display = "none";
+          }
+        }
+      }
+      check();
+    </script>
+  </body>
+</html>
